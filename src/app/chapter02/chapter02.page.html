@@ -1,0 +1,252 @@
+<ion-header>
+  <ion-toolbar style="color:#fff;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Numbering Systems</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="ion-padding" style="line-height: 25px !important;">
+
+      <p style="text-transform: uppercase; font-weight: bold;">Decimal System</p>
+      <ul>
+        <li>Comprise of 10 digits from 0 to 9</li>
+        <li><a style="color:crimson;">Base 10 system</a>. Example 254<sub>10</sub></li>
+        <li>POSITIONAL VALUE SYSTEM</li>
+      </ul>
+      <p>Example : 254<sub>10</sub> sonsists of 2 HUNDEREDS, 5 TENS and 4 ONE units.</p>
+	  <p>
+	  	Written as : (2 X 100) + (5 X 10) (4 X 1)<br>
+        = (2 X 10<sup>2</sup>) + (5 X 10<sup>1</sup>) + (4 X 10<sup>0</sup>)<br>
+	  </p>
+	  <p>Digit 2 carries the MOST weight and is known as MOST SIGNIFICANT DIGIT (MSD)</p>
+	  <p>Digit 4 carries the LEAST weight and is known as LEAST SIGNIFICANT DIGIT (LSD)</p>
+
+      <h1>&nbsp;</h1>
+
+      <p style="text-transform: uppercase; font-weight: bold;"><a style="color:crimson;">Disadvantage</a> in Digital Computer</p>
+	  <p>10 Discrete Value Level which is extremely  difficult to operate due to:</p>
+      <ul>
+        <li>Any VARIATION of <a style="color:crimson;">POWER SUPPLY</a> would cause error</li>
+        <li>Component <a style="color:crimson;">TOLERANCE MUST</a> be <a style="color:crimson;">ZERO</a></li>
+        <li>Component <a style="color:crimson;">VALUE</a> will change with <a style="color:crimson;">AGE</a></li>
+      </ul>
+
+      <h1>&nbsp;</h1>
+
+      <p style="text-transform: uppercase; font-weight: bold;">BINARY SYSTEM</p>
+      <ul>
+        <li>Comprise of 2 digits (0 & 1) known as BITS</li>
+        <li>
+        	POSITIONAL value system (Base 2 system. Example : 1011<sub>2</sub>)<br>
+        	1011<sub>2</sub>=(1X2<sup>3</sup>)+(0X2<sup>2</sup>)+(1X2<sup>1</sup>)+(1X2<sup>0</sup>)
+        </li>
+        <li>
+        	<a style="color:crimson;">BINARY</a> to <a style="color:crimson;">DECIMAL</a> Conversion<br>
+        	1011<sub>2</sub>=(1X2<sup>3</sup>)+(0X2<sup>2</sup>)+(1X2<sup>1</sup>)+(1X2<sup>0</sup>)<br>
+        	= 8+0+2+1<br>
+        	= 11
+        </li>
+        <li>
+        	<a style="color:crimson;">DECIMAL</a> to <a style="color:crimson;">BINARY</a> Conversion. SUCCESSIVE POWER OF 2.<br>
+        	27 = 16+8+2+1<br>
+        	=2<sup>4</sup> + 2<sup>3</sup> + 2<sup>1</sup> + 2<sup>0</sup><br>
+        	=(1X2<sup>4</sup>)+(1X2<sup>3</sup>)+(0X2<sup>2</sup>)+(1X2<sup>1</sup>)+(1X2<sup>0</sup>)<br>
+        	= 11011<sub>2</sub>
+        </li>
+        <li>Suitable for <a style="color:crimson;">SMALL number</a></li>
+        <li>Any number converted into <a style="color:crimson;">BINARY</a> form, the binary numbers is known as a <a style="color:crimson;">WORD</a>.</li>
+        <li>Each word is formed of a <a style="color:crimson;">numbers of BITS (BINARY DIGITS)</a> and this represents the <a style="color:crimson;">WORD LENGTH</a>.</li>
+        <li>
+        	Example: 347<sub>10</sub> = 101011011<sub>2</sub><br>
+        	So 101011011<sub>2</sub> is a <a style="color:crimson;">WORD</a>. Word length is 9 <a style="color:crimson;">because there is 9 bits</a>.
+        </li>
+      </ul>
+
+      <h1>&nbsp;</h1>
+
+      <p style="text-transform: uppercase; font-weight: bold;">OCTAL SYSTEM</p>
+      <ul>
+        <li><a style="color:crimson;">Base 8 systems</a>. Composed of 8 digits from 0 to 7.</li>
+        <li>
+        	<a style="color:crimson;">OCTAL</a> to <a style="color:crimson;">DECIMAL</a> conversion<br>
+        	275<sub>8</sub>=(2x8<sup>2</sup>)+(7x8<sup>1</sup>)+(5x8<sup>0</sup>)<br>
+        	=128+56+5 = 189<sub>10</sub>
+        </li>
+        <li>
+        	<a style="color:crimson;">DECIMAL</a> to <a style="color:crimson;">OCTAL</a> conversion<br>
+        	Divide by 8 and Record any REMAINDER of division
+        </li>
+        <li>
+        	<a style="color:crimson;">OCTAL</a> to <a style="color:crimson;">BINARY</a> conversion<br>
+        	Convert each<a style="color:crimson;">OCTAL</a> number to <a style="color:crimson;"> into 3 bits BINARY</a> equivalent.<br>
+        	635<sub>8</sub> TO BINARY<br>
+        	<table>
+        		<tr>
+        			<td style="text-align: center;">6</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">3</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">5</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: center;">110</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">011</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">101</td>
+        		</tr>
+        	</table>
+        	Thus, 635<sub>8</sub>= 110011101<sub>2</sub>
+        </li>
+        <li>
+        	<a style="color:crimson;">BINARY</a> to <a style="color:crimson;">OCTAL</a> conversion. (100111011<sub>2</sub> TO OCTAL)<br>
+        	Divide BINARY number into groups of 3 BITS starting from LSB.<br>
+        	<table>
+        		<tr>
+        			<td style="text-align: center;">100</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">111</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">011</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: center;">4</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">7</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">3</td>
+        		</tr>
+        	</table>
+        	Thus, 100111011<sub>2</sub>=473<sub>8</sub><br>
+        	If the FINAL group of MSB does NOT have 3 BITS, <a style="color:crimson;">ADD enough ZERO to make up 3 BITS</a>.
+        </li>
+      </ul>
+
+      <h1>&nbsp;</h1>
+
+      <p style="text-transform: uppercase; font-weight: bold;">HEXADECIMAL SYSTEM</p>
+      <ul>
+        <li>
+        	<a style="color:crimson;">DECIMAL</a> to <a style="color:crimson;">HEX</a> Conversion.<br>
+        	<a style="color:crimson;">Divide with 16</a> and take the REMAINDER of division.
+        </li>
+        <li>
+        	<a style="color:crimson;">HEX</a> to <a style="color:crimson;">BINARY</a> Conversion. Convert HEX digit into 4 bits BINARY equivalent.<br>
+        	B2F<sub>16</sub> TO BINARY<br>
+        	<table>
+        		<tr>
+        			<td style="text-align: center;">B</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">2</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">F</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: center;">1101</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">0010</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">1111</td>
+        		</tr>
+        	</table>
+        	THUS, B2F<sub>16</sub>= 101100101111<sub>2</sub>
+        </li>
+        <li>
+        	<a style="color:crimson;">BINARY</a> to <a style="color:crimson;">HEX</a> conversion. Divide BINARY number into groups of 4 bits STARTING at LSB.<br>
+        	110110101001<sub>2</sub> TO HEX<br>
+        	<table>
+        		<tr>
+        			<td style="text-align: center;">1101</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">1010</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">1001</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: center;">13</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">10</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">9</td>
+        		</tr>
+        		<tr>
+        			<td style="text-align: center;">D</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">A</td>
+        			<td>&nbsp;&nbsp;</td>
+        			<td style="text-align: center;">9</td>
+        		</tr>
+        	</table>
+        	Thus, 110110101001<sub>2</sub>=DA9<sub>16</sub>
+        </li>
+        <li>
+        	<a style="color:crimson;">HEX</a> to <a style="color:crimson;">OCTAL</a> conversion and vice versa.
+        	<ul>
+        		<li>Convert HEX to BINARY</li>
+        		<li>Convert BINARY to OCTAL</li>
+        	</ul>
+        	<a style="color:crimson;">OCTAL</a> to <a style="color:crimson;">HEX</a>, just <a style="color:crimson;">REVERSE the process</a>.<br>
+        	3D<sub>16</sub> convert to OCTAL.
+        	<ul>
+        		<li>
+        			Convert HEX to BINARY,<br>
+		        	<table>
+		        		<tr>
+		        			<td style="text-align: center;">3</td>
+		        			<td>&nbsp;&nbsp;</td>
+		        			<td style="text-align: center;">D</td>
+		        		</tr>
+		        		<tr>
+		        			<td style="text-align: center;">0011</td>
+		        			<td>&nbsp;&nbsp;</td>
+		        			<td style="text-align: center;">1101</td>
+		        		</tr>
+		        	</table>
+		        	3D<sub>16</sub> = 111101<sub>2</sub>
+        		</li>
+        		<li>
+        		Convert BINARY to OCTAL<br>
+		        	<table>
+		        		<tr>
+		        			<td style="text-align: center;">111</td>
+		        			<td>&nbsp;&nbsp;</td>
+		        			<td style="text-align: center;">101</td>
+		        		</tr>
+		        		<tr>
+		        			<td style="text-align: center;">7</td>
+		        			<td>&nbsp;&nbsp;</td>
+		        			<td style="text-align: center;">5</td>
+		        		</tr>
+		        	</table>
+		        	111101<sub>2</sub> = 75<sub>8</sub>
+		        </li>
+        	</ul>
+	        Thus, 3D<sub>16</sub> = 75<sub>8</sub>
+        </li>
+      </ul>
+
+      <h1>&nbsp;</h1>
+
+      <p style="text-transform: uppercase; font-weight: bold;">BCD</p>
+      <ul>
+        <li><a style="color:crimson;">B</a>inary <a style="color:crimson;">C</a>oded <a style="color:crimson;">D</a>ecimal</li>
+        <li>Number represented in <a style="color:crimson;">4 bits</a> binary code</li>
+        <li>Leaving a space between each <a style="color:crimson;">group</a> of 4 digits</li>
+        <li>
+	        Example:
+	        <ul>
+	        	<li style="color:crimson;">11<sub>10</sub> to BCD is 0001 0001</li>
+	        	<li style="color:crimson;">1000 0101 in BCD to Decimal is 85<sub>10</sub></li>
+	        </ul>
+	    </li>
+      </ul>
+
+      <h1>&nbsp;</h1>
+
+      <p style="text-transform: uppercase; font-weight: bold; text-align: center;"><-- END OF NOTES --></p>
+	</div>
+
+</ion-content>

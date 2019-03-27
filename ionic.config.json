@@ -1,5 +1,7 @@
 {
   "name": "DigitalTechnique",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
