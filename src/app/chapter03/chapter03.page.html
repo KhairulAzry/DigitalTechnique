@@ -1,0 +1,205 @@
+<ion-header>
+  <ion-toolbar style="color:#fff;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Data Conversion</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="ion-padding" style="line-height: 25px !important;">
+		
+		<p style="text-transform: uppercase; font-weight: bold;">Analogue vs. Digital</p>
+      	<img src="./assets/notes/chapter3/c3-001.png" alt="image" height="auto" width="100%">
+      	<p>Analogue quantities is continuos value</p>
+      	<img src="./assets/notes/chapter3/c3-002.png" alt="image" height="auto" width="100%">
+      	<p>Digital quantities is discrete values</p>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">DATA CONVERSION- GENERAL</p>
+      	<img src="./assets/notes/chapter3/c3-003.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">Terminology</p>
+		<ul>
+			<li><a style="color: crimson;">Resolution</a> - the number of steps the input range is divided into. Usually expressed as bits (n) and number of steps is.</li>
+			<li><a style="color: crimson;">Voltage resolution</a> – the smallest change that can occur in the analog output as a result of changes in the digital input.</li>
+			<li><a style="color: crimson;">Range</a> - The input range (or gain) refers to the maximum and minimum voltage that will be digitized by the ADC.</li>
+			<li><a style="color: crimson;">Sample and hold acquisition time</a> - sample and hold circuit ‘freezes’ an otherwise varying analogue voltage at the moment the sample is required.</li>
+			<li><a style="color: crimson;">Linearity errors</a> - maximum deviation of the step size from the ideal step size.</li>
+			<li><a style="color: crimson;">Offset errors</a> - where a reading is other than zero for a zero condition is obtained. It means that every reading will be inaccurate from this amount.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">A TO D CONVERTER (ADC)</p>
+		<ul>
+			<li>Digital ramp converter</li>
+			<li>Successive approximation ADC</li>
+			<li>Integrated dual slope converter</li>
+			<li>The charge balancing converter</li>
+			<li>Flash ADC</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">DIGITAL RAMP CONVERTER</p>
+      	<img src="./assets/notes/chapter3/c3-004.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li>The Ramp or Staircase type of Analog to Digital Converter uses a counter and a DAC (digital to Analog converter) to match the digital output to the analog input.</li>
+			<li>It does this by <a style="color: crimson;">converting the sequential count back into an analog signal and comparing the voltage level to the input signal</a>. Stopping the count when the two are equal. With this method of conversion, the output climbs from zero to the desired value and it is going to take longer to produce a correct output for higher voltages than for lower voltages.</li>
+			<li><a style="color: crimson;">Disadvantage</a> - longer conversion time.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">SUCCESSIVE-APPROXIMATION ADC (SAC)</p>
+      	<img src="./assets/notes/chapter3/c3-005.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li>Use register instead of counter (digital ramp) as input to DAC</li>
+			<li>Control logic <a style="color: crimson;">modifies the content of the bit-by- bit until the output is equivalent of the VA</a>.</li>
+			<li>Has fixed value of conversion time independent of the value of the analogue input therefore <a style="color: crimson;">faster than digital ramp</a>.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">INTEGRATED DUAL SLOPE CONVERTER</p>
+      	<img src="./assets/notes/chapter3/c3-006.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li>Output from integrator has two functions (input and time) to comparator</li>
+			<li>Output of integrator <a style="color: crimson;">slowly changing voltage , rising to peak -ramp up (fixed time) and fall back to zero -ramp down</a>. This time then is measured as analogue input.</li>
+			<li>Use electronic switch to change the integrator input voltage ( Vin and Vref)</li>
+			<li><a style="color: crimson;">Slower than SAC but more accurate and high immunity noise.</a></li>
+			<li><a style="color: crimson;">Application</a> : multimeter where accuracy is the prime concern than speed.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CHARGE BALANCING CONVERTER</p>
+      	<img src="./assets/notes/chapter3/c3-007.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li>Use over sampling technique also known as Sigma/Delta Modulation.</li>
+			<li>Sampling analogue information more than sampling rate.</li>
+			<li>Differential amplifier produces error signal by comparing with analogue input.</li>
+			<li>The output from differential amplifier than is integrated then fed to comparator with output is clocked at over sampling rate.</li>
+			<li>If integrator output is 0 than comparator output is 1 else 0. (comparator output is 1 bit ADC).</li>
+			<li>The term charge balancing used because the idea of converter is to maintain zero charge on the integrator capacitor.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">FLASH ADC</p>
+		<ul>
+			<li>This is 3-bit resolution flash converter with 1V step size.</li>
+			<li>The voltage divider sets up reference level for each comparator-7 levels corresponding to 1V.</li>
+			<li>The analog input VA connected to the other input of each comparator.</li>
+			<li>Outputs of comparators are connected to active LOW priority encoder.</li>
+		</ul>
+      	<img src="./assets/notes/chapter3/c3-008.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li><a style="color: crimson;">VA<1V, all comparator outputs C1 through C7 will be HIGH.</a></li>
+			<li><a style="color: crimson;">VA>1V, one or more comparator output will be LOW.</a></li>
+		</ul>
+      	<img src="./assets/notes/chapter3/c3-009.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li><a style="color: crimson;">Operate at high speed due to no timing sequence, no clock signal, conversion as soon as VA is applied-only dependant on the propagation delay of the components.</a></li>
+			<li>n-bit converter requires 2<sup>n</sup> possible voltage level and <a style="color: crimson;">2<sup>n</sup> -1 comparators</a>.</li>
+			<li>
+				<a style="color: crimson;">Disadvantage:</a>
+				<ul>
+					<li><a style="color: crimson;">More complex circuitry with the increasing of the bits required.</a></li>
+					<li><a style="color: crimson;">High cost due to complex circuitry.</a></li>
+					<li><a style="color: crimson;">Restricted to the application where high speed is prime requirement.</a></li>
+				</ul>
+			</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">DIGITAL TO ANALOGUE CONVERTER (DAC)</p>
+		<ul>
+			<li>OP-AMP Summing</li>
+			<li>Precision Level DAC</li>
+			<li>Current DAC</li>
+			<li>R-2R Ladder DAC</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">OP-AMP SUMMING</p>
+      	<img src="./assets/notes/chapter3/c3-010.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li>The op-amp <a style="color: crimson;">act as summing amplifier</a>.</li>	
+			<li>
+				The output therefore<br>
+				<b>Vo = RF x -(V<sub>D</sub>/R<sub>D</sub>+V<sub>C</sub>/R<sub>C</sub>+V<sub>B</sub>/R<sub>B</sub>+V<sub>A</sub>/R<sub>A</sub>)</b>
+			</li>
+			<li>Example. If the input is 1001 and RF = 1kΩ and VD =VC=VB=VA= 5V.</li>
+			<li>Vo = 1k x (-(5V/1k)+0+0+(5V/8k)) = - 5.63V</li>
+			<li>
+				<a style="color: crimson;">Disadvantage:</a>
+				<ul>
+					<li><a style="color: crimson;">Output voltages may not be ideal value due to variation in the input and feedback resistor.</a></li>
+					<li><a style="color: crimson;">Logic level inputs not being exactly 0V or 5V.</a></li>
+					<li><a style="color: crimson;">Only suitable for small number of bit.</a></li>
+				</ul>
+			</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">PRECISION LEVEL DAC</p>
+		<ul>
+			<li><a style="color: crimson;">To overcome the major disadvantage of the simple OP-AMP summing DAC.</a></li>
+			<li><a style="color: crimson;">Overcome using very precise resistor or by trimming.</a></li>
+			<li>The digital inputs cannot be taken directly from the output of FFs or logic gates due to the output logic levels of these devices are not precise values like 0V or 5V.</li>
+			<li>Necessary to add circuitry between each digital input and its input resistor to the summing amplifier.</li>
+			<li>Each digital input control a semiconductor switch.</li>
+			<li><a style="color: crimson;">When the input is HIGH, the switch closes and connects a VREF (precision reference supply) to the input resistor.</a></li>
+			<li>When <a style="color: crimson;">LOW</a>, the <a style="color: crimson;">switch open</a>.</li>
+			<li><a style="color: crimson;">V<sub>REF</sub> produces a very stable, precise voltage to generate an accurate analog output</a></li>
+		</ul>
+      	<img src="./assets/notes/chapter3/c3-011.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CURRENT DAC</p>
+		<ul>
+			<li><a style="color: crimson;">Uses 4 current parallel path, each controlled by semiconductor switch.</a></li>
+			<li>The state of each switch is controlled by logic levels at the binary inputs(B0,B1,B2,B3).</li>
+			<li>Current through each path is determined by an accurate reference voltage VREF and a precision resistor (binary weighted).</li>
+			<li><a style="color: crimson;">The output current will be the sum of the individual current.</a></li>
+		</ul>
+      	<img src="./assets/notes/chapter3/c3-012.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li><a style="color: crimson;">For I<sub>OUT</sub> to be accurate, R<sub>L</sub> should be a short to ground.</a></li>
+			<li>Accomplish by <a style="color: crimson;">using an op-amp as a current-to- voltage converter</a>.</li>
+		</ul>
+      	<img src="./assets/notes/chapter3/c3-013.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li>The op-amp negative feedback forces a current equal to I<sub>OUT</sub> to flow through R<sub>F</sub> to produce V<sub>OUT</sub>= -I<sub>OUT</sub> x R<sub>F</sub></li>
+			<li>V<sub>OUT</sub> will be an analog voltage that is proportional to the binary input to the DAC</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">R-2R LADDER DAC</p>
+      	<img src="./assets/notes/chapter3/c3-014.png" alt="image" height="auto" width="100%">
+		<ul>
+			<li><a style="color: crimson;">Overcomes problems due to wide range of close value input resistor by using only 2 resistors.</a></li>
+			<li>But resistor has to be accurate.</li>
+			<li>
+				V<sub>out</sub> =-(V<sub>ref</sub>/2<sup>(N-1)</sup>)x B<br>
+				<a style="color: crimson;">B is the value of binary input N is the number of BITs</a>
+			</li>
+		</ul>
+
+      <h1>&nbsp;</h1>
+
+      <p style="text-transform: uppercase; font-weight: bold; text-align: center;"><-- END OF NOTES --></p>
+
+	</div>
+</ion-content>

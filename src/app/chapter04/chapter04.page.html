@@ -1,0 +1,110 @@
+<ion-header>
+  <ion-toolbar style="color:#fff;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Data Buses</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="ion-padding" style="line-height: 25px !important;">
+		
+		<p style="text-transform: uppercase; font-weight: bold;">WHAT IS DATA BUSES?</p>
+		<ul>
+			<li>A wire or group of <a style="color: crimson;">wires used to move data to/from components and to/from other computers</a>.</li>
+			<li>The data can be in form of electrical pulses or light signals (<a style="color: crimson;">fiber optics</a>).</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">ABOUT ARINC</p>
+		<ul>
+			<li>Aeronautical Radio INCorporated (ARINC) - established in 1929, is the leading provider of transport communications and systems engineering solutions for five major industries: (aviation, airports, defence, government and transportation).</li>
+			<li>Primary activity is to produce specifications and reports for purpose of <a style="color: crimson;">Indicating to manufacturers the group opinion concerning requisites of new equipment and to channel new equipment designs in direction which will result in maximum standardization</a>.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">WHAT IS ARINC 429?</p>
+		<ul>
+			<li>Specification which define how avionic equipment and systems should communicate each other.</li>
+			<li>Consist of pair of <a style="color: crimson;">twisted wires with shielding</a>.</li>
+			<li>Point to point data bus and uses a unidirectional data bus standard (Tx and Rx are on separate ports) known as the Mark 33 Digital Information Transfer System (DITS).</li>
+			<li>Messages are transmitted at either <a style="color: crimson;">12.5 or 100 kbit/s</a> to other system elements that are monitoring the bus messages.</li>
+			<li>Always transmitting either <a style="color: crimson;">32-bit data words or the NULL state</a>.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">ELECTRICAL CHARACTERISTIC ARINC 429</p>
+		<ul>
+			<li>Self clocking   and self synchronizing system called 'bipolar return to zero'.</li>
+			<li>Transmitted in binary bit form, '1's and '0's are represent high voltage (+5v) and low voltage (-5v ) level respectively for half of clock cycle then each pulse return to zero in the middle of clock pulse.</li>
+		</ul>
+      	<img src="./assets/notes/chapter4/c4-001.png" alt="image" height="auto" width="100%">
+      	<img src="./assets/notes/chapter4/c4-002.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">ARINC 429 -PROTOCOL</p>
+		<ul>
+			<li><a style="color: crimson;">Only one transmitter on a wire pair</a>.</li>
+			<li>Always transmit 32 bit word or NULL state.</li>
+			<li>At least <a style="color: crimson;">1 receiver on wire pair and up to 20 receiver only</a>.</li>
+			<li>Received depend on line length and the numbers of receivers connected to the bus.</li>
+			<li>Example of ARINC 429 Application in Boeing 747.</li>
+		</ul>
+      	<img src="./assets/notes/chapter4/c4-003.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">ARINC 429 - WORD FORMAT</p>
+		<ul>
+			<li>WORD format is a 32 bit with five basic parts
+				<ul>
+					<li><a style="color: crimson;">LABEL</a></li>
+					<li><a style="color: crimson;">SOURCE /DESTINATION IDENTIFIER (SDI)</a></li>
+					<li><a style="color: crimson;">DATA FIELD</a></li>
+					<li><a style="color: crimson;">SIGN STATUS MATRIX(SSM)</a></li>
+					<li><a style="color: crimson;">PARITY BIT (P)</a></li>
+				</ul>
+      			<img src="./assets/notes/chapter4/c4-004.png" alt="image" height="auto" width="100%">
+			</li>
+			<li><a style="color: crimson;">LABEL</a> - The first 8 bits of the word (octal coded). Identifies the information contained in the data e.g. airspeed, total air temp.
+      		<img src="./assets/notes/chapter4/c4-005.png" alt="image" height="auto" width="100%"></li>
+			<li><a style="color: crimson;">SOURCE/DESTINATION IDENTIFIER (SDI)</a>) - used to identify the source/ destination of a word e.g. Which of a number of installations the word is coming from or needs to be directed into.</li>
+			<li><a style="color: crimson;">DATA FIELD</a> - contains specific data related to the LABEL. For binary word contained in bits 11- 28 and binary coded decimal (BCD) in bits 11- 29. Any bit not used are filled with logic 0's (pad bits).</li>
+			<li><a style="color: crimson;">SIGN STATUS MATRIX</a> - bits 29,30,31 for binary word and 30,31 for BCD. Identify characteristics of the word e.g. east/west, +ve/- ve and its status e.g. No computed data, failure warning, functional test or normal operation.</li>
+			<li>SSM code for identity characteristic of the word for BCD data.
+      		<img src="./assets/notes/chapter4/c4-006.png" alt="image" height="auto" width="100%"></li>
+			<li>SSM code for status of word for BCD data
+      		<img src="./assets/notes/chapter4/c4-007.png" alt="image" height="auto" width="100%"></li>
+			<li><a style="color: crimson;">PARITY</a> - Uses odd parity e.g. Total number of logic '1' in the word must be an odd number. If not parity bit is set to 1. Uses to check an error e.g. If receiving signal doesn't contain odd number 1, fault signal will be generated.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">TRANSMISSION ORDER</p>
+		<p>The least significant bit of each byte except the label is transmitted ahead of the data in each case. The order as follows:  8,7,6,5,4,3,2,1,9,10,11,12,13,14,... .32.</p>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">OTHER SPECIFICATION</p>
+		<ul>
+			<li>ARINC 629
+				<ul>
+					<li><a style="color: crimson;">Additional ARINC standards are being developed. ARINC 629 is used on the new Boeing 777 Aircraft.</a></li>
+					<li>It uses a high speed bi-directional bus capable of either periodic or aperiodic transmissions.</li>
+					<li>Access to the bus is controlled by a sophisticated protocol involving wait periods, quiet periods and other rules.</li>
+					<li>Data bus is unshielded, twisted pair of wires bonded and terminated at both ends. Data is send at rate 2 Mbps.</li>
+				</ul>
+			</li>
+		</ul>
+
+      <h1>&nbsp;</h1>
+
+      <p style="text-transform: uppercase; font-weight: bold; text-align: center;"><-- END OF NOTES --></p>
+
+	</div>
+</ion-content>

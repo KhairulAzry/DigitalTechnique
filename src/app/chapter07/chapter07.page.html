@@ -1,0 +1,286 @@
+<ion-header>
+  <ion-toolbar style="color:#fff;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Flip Flop Terminology & Operation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="ion-padding" style="line-height: 25px !important;">
+		
+		<p style="text-transform: uppercase; font-weight: bold;">FLIP FLOP</p>
+		<ul>
+			<li>Memory type circuits use flip-flops as their main components.</li>
+			<li>Flip-flop because on the application of a suitable pulse at the input(i/p), it causes the i/p to <a style="color: crimson;">flip</a> into one of it’s two stable states and stay in that state until a second input will <a style="color: crimson;">flop</a> it into its previous state.</li>
+			<li>FF is made of several logic gates connected in such a way to permit information to be stored.</li>
+			<li>A FF can have any number of inputs, but normally has two outputs.(Q and Q bar)
+      			<img src="./assets/notes/chapter7/c7-001.png" alt="image" height="auto" width="100%">
+			</li>
+			<li>State of FF is referring to Q.</li>
+			<li>If FF is HIGH, Q is HIGH or 1 (also called the SET state).</li>
+			<li>If FF is LOW, Q is LOW or 0 (CLEAR or RESET state).</li>
+		</ul>	
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">NAND SC FF</p>
+      	<img src="./assets/notes/chapter7/c7-002.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">OPERATION</p>
+		<ul>
+			<li>SET=0, CLEAR=0: This condition is ambiguous.</li>
+			<li>SET=0, CLEAR=1: This condition sets Q to 1.</li>
+			<li>SET=1, CLEAR=0: This condition sets Q to 0 and Q bar to 1.(CLEAR or RESET state).</li>
+			<li>SET=1, CLEAR=1:unchange so FF is in its MEMORY state.</li>
+			<li>When both of its inputs are 1 it has two different stable states possible (memory state):
+      			<img src="./assets/notes/chapter7/c7-003.png" alt="image" height="auto" width="100%">
+      		</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">NAND SC FF TIMING DIAGRAM</p>
+		<img src="./assets/notes/chapter7/c7-004.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">NOR SC FF</p>
+		<img src="./assets/notes/chapter7/c7-005.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">OPERATION</p>
+		<ul>
+			<li>SET=0, CLEAR=0:unchange so FF is in its MEMORY state.</li>
+			<li>SET=0, CLEAR=1: This condition sets Q to 0.</li>
+			<li>SET=1, CLEAR=0: This condition sets Q to 1 and Q bar to 0.(CLEAR or RESET state).</li>
+			<li>SET=1, CLEAR=1: This condition is ambiguous.</li>
+			<li>When both of its inputs are 0 it has two different stable states possible (memory)
+      			<img src="./assets/notes/chapter7/c7-006.png" alt="image" height="auto" width="100%">
+      		</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">NOR SC FF TIMING DIAGRAM</p>
+		<img src="./assets/notes/chapter7/c7-007.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CLOCK</p>
+		<ul>
+			<li>In sequential logic circuits where there may be a large number of flip-flops, it is important they all act at the <a style="color: crimson;">same time</a> so that no circuit operates out of sequence.</li>
+			<li>Achieved by a CLOCK pulse which is derived from a pulse generator with a high frequency.</li>
+			<li>The circuit may be triggered when the clock pulse changes from 1 to 0 or from 0 to 1(<a style="color: crimson;">edge triggered</a>) or when <a style="color: crimson;">the level</a> is 1 or 0.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CLOCK SIGNAL</p>
+		<ul>
+			<li>There are two types of sequential circuits;
+				<ul>
+					<li><a style="color: crimson;">Synchronous</a></li>
+					<li><a style="color: crimson;">Asynchronous</a></li>
+				</ul>
+			</li>
+			<li>Asynchronous system, the outputs of the logic circuits can change state <a style="color: crimson;">anytime</a> the inputs change.</li>
+			<li>In synchronous logic there is a <a style="color: crimson;">master oscillator</a> (clock) that provides regular timing pulses. The output <a style="color: crimson;">only change</a> when the FF receives a clock pulse.</li>
+			<li>Most clocked FF’s are triggered by transition of the clock pulse and there are two types of transition.</li>
+			<li>Clocked FF has a clock input that is typically labelled CLK, CK, CP or C.
+				<ul>
+					<li>Positive Going Transition (PGT)</li>
+					<li>Negative Going Transition (NGT)</li>
+				</ul>
+			</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">PGT</p>
+		<p>POSITIVE GOING TRANSITION</p>
+		<ul>
+			<li>The transition of a logic state (pulse) from <a style="color: crimson;">0 to 1</a> (sometime referred to as POSITIVE or LEADING EDGE TRIGGERING).</li>
+			<li>This indicated in circuit  by a <a style="color: crimson;">small triangle (>).</a>
+			<img src="./assets/notes/chapter7/c7-008.png" alt="image" height="auto" width="100%"></li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">NGT</p>
+		<p>NEGATIVE GOING TRANSITION</p>
+		<ul>
+			<li>The transition of a logic state (pulse) from <a style="color: crimson;">1 to 0</a> (sometime referred to as NEGATIVE or TRAILING EDGE TRIGGERING).</li>
+			<li>This indicated in circuit  by a <a style="color: crimson;">circle and small triangle (>).</a>
+			<img src="./assets/notes/chapter7/c7-009.png" alt="image" height="auto" width="100%"></li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CLOCKED SC FLIP FLOP</p>
+		<p>A simple clocked SC FF can be constructed using two AND gates to direct the inputs into normal SC latch.</p>
+		<img src="./assets/notes/chapter7/c7-010.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">SC FF TRUTH TABLE</p>
+		<img src="./assets/notes/chapter7/c7-011.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CLOCKED SC FLIP FLOP</p>
+		<ul>
+			<li>SET=1, CLEAR=0, CLK=0 to 1: This condition does not effect the FF’s output while CLK=0 because the output from the AND Gate is 0, so the NOR latch is in the memory state. When the CLK goes to 1 the AND Gates are enabled so the FF will then flip to its SET state.</li>
+			<li>SET=1, CLEAR=0, CLK=1 to 0: This condition has no effect on the FF’s output because when CLK=0 the AND Gates are disable and the NOR latch is in memory state.</li>
+			<li>SET=0, CLEAR=1, CLK=0 to 1: This condition does not effect the FF’s output while CLK=0 because the output from the AND Gate is 0, so the NOR latch is in the memory state. When the CLK goes to 1 the AND Gates are enabled so the FF will then flip to its CLEAR or RESET state.</li>
+			<li>SET=0, CLEAR=0: With this input the output from the AND gates will be 0 irrespective of the CLK so the FF in the memory state.</li>
+			<li>SET=1, CLEAR=1: This condition is INVALID and its not normally used.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CLOCKED SC FLIP FLOP</p>
+		<img src="./assets/notes/chapter7/c7-012.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">EDGE DETECTOR</p>
+		<p>In order for the CLK input to be transition triggered it must have an edge detector included in its circuit. There are 2 main types of edge detectors:</p>
+		<ul>
+			<li><a style="color: crimson;">Leading Edge Detector</a>
+				<ul>
+					<li>This consist of AND gate and an INVERTOR. On the PGT the INVERTOR produces a time delay of a few nanoseconds putting two 1’s on the input of the AND gate which the produces an output that is HIGH for these few nanoseconds.
+					<img src="./assets/notes/chapter7/c7-013.png" alt="image" height="auto" width="100%">
+					</li>
+				</ul>
+			</li>
+			<li><a style="color: crimson;">Trailing Edge Detector</a>
+				<ul>
+					<li>This consist of NOR gate and an INVERTOR. On the NGT the INVERTOR produces a time delay of a few nanoseconds putting two 0’s on the input of the NOR gate which then produces an output that is HIGH for these few nanoseconds.
+					<img src="./assets/notes/chapter7/c7-014.png" alt="image" height="auto" width="100%">
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">JK FLIP FLOP</p>
+		<p>By adding some additional gating to the SR FF the problem of the indeterminate state can be overcome. The FF without an indeterminate state is known as the JK Flip Flop. The set input is J and the reset input is K.</p>
+		<ul>
+			<li>A PGT triggered J-K FF can be constructed in 3 parts:
+				<ul>
+					<li>LEADING EDGE DETECTOR</li>
+					<li>-	PULSE STEERING CIRCUIT<br>Consist of 2, three input NAND gate which the inputs connected to:<br><a style="color: crimson;">The CLK, J&K respectively, Cross connected to the Q and Qbar.</a></li>
+					<li>A NAND RS FF</li>
+				</ul>
+				<img src="./assets/notes/chapter7/c7-015.png" alt="image" height="auto" width="100%">
+				<img src="./assets/notes/chapter7/c7-016.png" alt="image" height="auto" width="100%">
+			</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CLOCKED RS FLIP FLOP OPERATION</p>
+		<ul>
+			<li>J=1, K=0, CLK=0 to 1: This condition does not effect the FF’s output while CLK=0 because the output from the NAND Gate is 1, so the NAND latch is in the memory state. When the CLK goes to 1 the NAND Gates are enabled so the FF will then flip to its SET state. (Q=1)</li>
+			<li>J=1, K=0, CLK=1 to 0: This condition has no effect on the FF’s output because when CLK=0 or 1 the NAND Gates are disable and the NAND latch is in memory state.</li>
+			<li>J=0, K=1, CLK=0 to 1: This condition does not effect the FF’s output while CLK=0 because the output from the NAND Gates are disable, so the NAND latch is in the memory state. When the CLK goes to 1 the AND Gates are enabled so the FF will then flip to its CLEAR or RESET state. (Q=0)</li>
+			<li>J=0, K=0: With this input the output from the NAND gates will be 1 irrespective of the CLK so the FF in the memory state.</li>
+			<li>J=1, K=1: This condition does not effect the FF’s output while CLK=0 because the NAND gates are disable and the NAND latch is in the memory state. During the PGT of the CLK pulse the NAND gates are enable and the FF’s output will go to its opposite state. This the TOGGLE mode of operation.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CLOCKED JK FLIP FLOP</p>
+		<img src="./assets/notes/chapter7/c7-017.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">CLOCKED D FLIP FLOPS</p>
+		<ul>
+			<li>Can be constructed using a J-K FF, adding an INVERTOR to the K input and connecting both input together.
+			<img src="./assets/notes/chapter7/c7-018.png" alt="image" height="auto" width="100%"></li>
+			<li>What ever data is placed at the D input is then latched(delay) to the Q output after CLK.
+			<img src="./assets/notes/chapter7/c7-019.png" alt="image" height="auto" width="100%"></li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">D LATCH</p>
+		<p>Can be constructed using an INVERTOR and two NAND gates to direct the input to a normal NAND latch.</p>
+		<img src="./assets/notes/chapter7/c7-020.png" alt="image" height="auto" width="100%">
+		<p>D LATCH OPERATION</p>
+		<ul>
+			<li>With a D latch the common input  to the steering NAND gates is called ENABLE (EN) input because its effect on the output is not restricted to its transition.</li>
+			<li>D latch has two operating conditions
+				<ul>
+					<li>When the EN input is HIGH, Q will become same level as D and will follow any changes in the D input. In this mode the D latch is said to be TRANSPARENT.</li>
+					<li>When the EN input is LOW, the D input in inhibited so the output will stay at whatever level they has when EN when low. In this mode the output is said to be LATCHED.</li>
+				</ul>
+			</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">T FLIP FLOP</p>
+		<ul>
+			<li>Toggling is an action that changes a device between its two output state on each consecutive operation of its control line.</li>
+			<li>The operation of the FF in toggle mode relies on placing the inverse of the output to the input after each clock edge. The input to the toggle is the clock signal and the output is taken from either the Q or Q bar terminal.
+			<img src="./assets/notes/chapter7/c7-021.png" alt="image" height="auto" width="100%"></li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">FACTOR AFFECTING THE FF RELIABILITY</p>
+		<p>The output of a clocked FF is dependent on both the Synchronous and Clock inputs there are some other factors which must be taken into account if the FF is to operate with reliability.</p>
+		<ul>
+			<li>SET UP TIME</li>
+			<li>HOLD TIME</li>
+			<li>PROPAGATION DELAY</li>
+			<li>MAXIMUM CLOCKING FREQUENCY</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">SET UP TIME</p>
+		<p>Set-up Time (ts): This is the time interval immediately preceding the active transition of the clock pulse during the synchronous input has to be kept at the proper level to ensure triggering of the FF.</p>
+		<img src="./assets/notes/chapter7/c7-022.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">HOLD TIME</p>
+		<p>Hold Time (th): This is the time interval immediately following the active transition of the clock pulse during the synchronous input has to be kept at the proper level to ensure triggering of the FF.</p>
+		<img src="./assets/notes/chapter7/c7-023.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">PROPAGATION DELAY</p>
+		<p>This is the delay in a FF from when the input signal is applied to then output makes its change. These delays are measured between the 50% point on the waveforms.</p>
+		<img src="./assets/notes/chapter7/c7-024.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">MAXIMUM CLOCK FREQUENCY</p>
+		<p>The highest frequency that may be applied to the clock input of a FF and still have trigger reliability.</p>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">ASYNCHRONOUS INPUTS</p>
+		<ul>
+			<li>Most clocked FF have one or more Asynchronous input. These input operate independently of the normal (synchronous) and the CLK inputs. They can be used to SET the FF to the 1 state, or CLEAR the output to the 0 state at any time regardless of the other inputs.</li>
+			<li>The asynchronous inputs are override inputs i.e they override all the other inputs and place the FF in one state or other.
+			<img src="./assets/notes/chapter7/c7-025.png" alt="image" height="auto" width="100%"></li>
+			<li>The asynchronous inputs are level triggered so they hold the output in the SET or CLEAR state while ever there is a LOW on the DC SET or DC CLEAR inputs. Thus, the asynchronous inputs can be used to hold the FF in a particular state for any desired interval. However, the asynchronous inputs are most often used to SET or CLEAR the FF to the desired state by the application of a momentary pulse.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+
+	    <p style="text-transform: uppercase; font-weight: bold; text-align: center;"><-- END OF NOTES --></p>
+
+	</div>
+</ion-content>

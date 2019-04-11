@@ -1,0 +1,150 @@
+<ion-header>
+  <ion-toolbar style="color:#fff;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-notes"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Fiber Optic</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<div class="ion-padding" style="line-height: 25px !important;">
+		
+		<p style="text-transform: uppercase; font-weight: bold;">BASIC COMMUNICATION SYSTEM</p>
+      	<img src="./assets/notes/chapter10/c10-001.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">WHAT IS FIBER OPTIC?</p>
+		<ul>
+			<li><a style="color: crimson;">Fiber optics</a> (optical fibers) are long, thin strands of very pure glass about the diameter of a human hair. They are arranged in bundles called <a style="color: crimson;">optical cables</a>.</li>
+			<li>Used to transmit high-speed transmission of data using <a style="color: crimson;">light</a> over long distances.</li>
+			<li>Transmission depend on the optical property of <a style="color: crimson;">total internal reflection</a>.</li>
+			<li>A bundle of optical fibers
+      		<img src="./assets/notes/chapter10/c10-002.png" alt="image" height="auto" width="100%"></li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">STRUCTURE</p>
+      	<img src="./assets/notes/chapter10/c10-003.png" alt="image" height="auto" width="100%">
+      	<ul>
+      		<li><a style="color: crimson;">Core</a> - Thin glass center of the fiber where the light travels.</li>
+      		<li><a style="color: crimson;">Cladding</a> - Outer optical material surrounding  the core that reflects the light back into the core.</li>
+      		<li><a style="color: crimson;">Buffer coating</a> - Plastic coating that protects the fiber from damage and moisture.</li>
+      		<li>Hundreds or thousands of these optical fibers are arranged in bundles in optical cables. The bundles are protected by the cable's outer covering, called a <a style="color: crimson;">jacket</a>.
+      		<img src="./assets/notes/chapter10/c10-004.png" alt="image" height="auto" width="100%"></li>
+      	</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">TOTAL INTERNAL REFLECTION</p>
+		<ul>
+			<li>Core(n1) and cladding(n2) have different refraction index (n). n1 is always greater than n2 (n1>n2)
+      		<img src="./assets/notes/chapter10/c10-005.png" alt="image" height="auto" width="100%"></li>
+      		<li>“When the <a style="color: crimson;">angle of incidence exceeds a critical value</a>, light cannot get out of the glass; instead, the <a style="color: crimson;">light bounces back in</a>.”</li>
+      		<li>Numerical aperture (NA)
+      			<ul>
+      				<li>Measure of maximum core angle for light rays to be reflected down the fibre by <a style="color: crimson;">total internal reflection</a></li>
+      				<li>
+      					Snell’s law : NA= sinθ = √(n<sub>1</sub><sup>2</sup> – n<sub>2</sub><sup>2</sup>)<br>
+      					n1 = refractive index of the core<br>n2 = refractive index of the cladding
+      				</li>
+      			</ul>
+      		</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">TYPE</p>
+		<ul>
+			<li><a style="color: crimson;">Single-mode</a>
+				<ul>
+					<li>Small core diameter (5-10µm) with an operating wavelength of around 1.5µm.</li>
+					<li>Transmitter source : laser diode.</li>
+					<li>Only 1 incident angle,θ i.e.  only 1 path and same velocity,  eliminating distortion due to pulse lapping.</li>
+					<li>Providing the least signal attenuation and the highest transmission speeds, large bandwidth (typically 500 - 1500 MHz.km) and longer distance.</li>
+					<li>Data is sent at multi-frequency (WDM Wave-Division- Multiplexing)</li>
+				</ul>
+			</li>
+			<li><a style="color: crimson;">Multi-mode</a>
+				<ul>
+					<li>Large diameter core (typically 100µm) with operating wavelength around 1µm.</li>
+					<li>Support hundreds or thousands of light rays traveling at different velocities i.e. many angles of incident.</li>
+					<li>Transmitter source : light emitting diode (LED).</li>
+					<li>Problem : <a style="color: crimson;">pulse broadening causing limitation on bandwidth</a>.</li>
+					<li>2 type of multi-mode : Step index and Graded Index</li>
+					<li>Easier to launch optical power and facilitate the connecting of similar fibre</li>
+				</ul>
+			</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">DATA TRANSMISSION</p>
+		<img src="./assets/notes/chapter10/c10-006.png" alt="image" height="auto" width="100%">
+		<img src="./assets/notes/chapter10/c10-007.png" alt="image" height="auto" width="100%">
+		<p>Total internal reflection of light in a multi-mode optical fiber.</p>
+		<img src="./assets/notes/chapter10/c10-008.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">TERMINOLOGY</p>
+		<ul>
+			<li><a style="color: crimson;">Attenuation</a> : signal loss within a fibre and measure in decibels per kilometer (dB/km).</li>
+			<li><a style="color: crimson;">Star coupler</a> : passive optical coupler which allows the light signals from each fibre stub to be coupled with other fibre stub and then into subsystems.</li>
+			<li><a style="color: crimson;">Wavelength Division Multiplexing (WDM)</a> : signal of different wavelengths are sent down the fibre all together.</li>
+			<li><a style="color: crimson;">Passive optical sensor</a> : optical sensor which do not require electrical supplies or any electronic processing. Used to monitor leading and trailing edge flap, spoilers, ailerons, rudder etc.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">FIBER OPTIC COMMUNICATION SYSTEM</p>
+		<img src="./assets/notes/chapter10/c10-009.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">TRANSMISSION</p>
+		<ul>
+			<li><a style="color: crimson;">Optical Source</a> - used to generate light signal. Can be either light-emitting diode (LED) or an injection- laser diode (ILD).</li>
+			<li><a style="color: crimson;">Transmitter</a> - Produces and encodes the light signals.</li>
+			<li><a style="color: crimson;">Optical fiber</a> - Conducts the light signals over a distance. Light pulses move easily down the fiber- optic line because of a principle known as total internal reflection.</li>
+			<li><a style="color: crimson;">Optical regenerator</a> - May be necessary to boost the light signal (for long distances).</li>
+			<li><a style="color: crimson;">Optical receiver</a> - Receives and decodes the light signals. Can be either photodiode or phototransistor.</li>
+		</ul>
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">OPTICAL SOURCES</p>
+		<ul>
+			<li><a style="color: crimson;">LDs advantages over LED's :</a>
+				<ul>
+					<li>They can be modulated at very high speeds.</li>
+					<li>They produce greater optical power.</li>
+					<li>They have higher coupling efficiency to the fiber optic cable.</li>
+				</ul>
+			</li>
+			<li><a style="color: crimson;">LED's advantages over LD's :</a>
+				<ul>
+					<li>higher reliability</li>
+					<li>better linearity</li>
+					<li>lower cost</li>
+				</ul>
+			</li>
+		</ul>
+		<img src="./assets/notes/chapter10/c10-010.png" alt="image" height="auto" width="100%">
+
+      	<h1>&nbsp;</h1>
+		
+		<p style="text-transform: uppercase; font-weight: bold;">TRANSMISSION</p>
+		<ul>
+			<li><a style="color: crimson;">Optical Source</a> - used to generate light signal. Can be either light-emitting diode (LED) or an injection- laser diode (ILD).</li>
+			<li><a style="color: crimson;">Transmitter</a> - Produces and encodes the light signals.</li>
+			<li><a style="color: crimson;">Optical fiber</a> - Conducts the light signals over a distance. Light pulses move easily down the fiber- optic line because of a principle known as total internal reflection.</li>
+			<li><a style="color: crimson;">Optical regenerator</a> - May be necessary to boost the light signal (for long distances).</li>
+			<li><a style="color: crimson;">Optical receiver</a> - Receives and decodes the light signals. Can be either photodiode or phototransistor.</li>
+		</ul>
+		
+
+	</div>
+</ion-content>
