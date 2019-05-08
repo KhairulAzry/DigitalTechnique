@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'coming-soon', loadChildren: './coming-soon/coming-soon.module#ComingSoonPageModule' },
   { path: 'chapter10', loadChildren: './chapter10/chapter10.module#Chapter10PageModule' },
   { path: 'exercise', loadChildren: './exercise/exercise.module#ExercisePageModule' },
+  { path: 'mid-sem-exercise', loadChildren: './mid-sem-exercise/mid-sem-exercise.module#MidSemExercisePageModule' },
   ];
 
 @NgModule({
